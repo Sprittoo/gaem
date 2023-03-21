@@ -50,6 +50,9 @@ TagManager:
   - name: Stage
     uniqueID: 3767028605
     locked: 0
+  - name: Thin walls
+    uniqueID: 3399925707
+    locked: 0
   - name: Wall
     uniqueID: 3181155175
     locked: 0
@@ -58,4 +61,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3186004337
+    locked: 0
+  - name: Gates
+    uniqueID: 2245984907
     locked: 0

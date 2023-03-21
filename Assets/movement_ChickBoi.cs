@@ -7,6 +7,8 @@ public class movement_ChickBoi : MonoBehaviour
     private Rigidbody2D rb;
     private float moveSpeed = 5;
 
+    private Vector2 movemnt;
+
 
     // Start is called before the first frame update
     void Start()
@@ -17,17 +19,23 @@ public class movement_ChickBoi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //movemnt.x = Input.GetAxisRaw("Horizontal");
+        //movemnt.y = Input.GetAxisRaw("Vertical");
         rb = GetComponent<Rigidbody2D>();
-        if (Input.GetKeyDown(KeyCode.W) == true) {
+        if (Input.GetKeyDown(KeyCode.W) == true)
+        {
             rb.velocity = Vector2.up * moveSpeed;
         }
-        if(Input.GetKeyDown(KeyCode.A) == true) {
+        if (Input.GetKeyDown(KeyCode.A) == true)
+        {
             rb.velocity = Vector2.left * moveSpeed;
         }
-        if(Input.GetKeyDown(KeyCode.S) == true) {
+        if (Input.GetKeyDown(KeyCode.S) == true)
+        {
             rb.velocity = Vector2.down * moveSpeed;
         }
-        if(Input.GetKeyDown(KeyCode.D) == true) {
+        if (Input.GetKeyDown(KeyCode.D) == true)
+        {
             rb.velocity = Vector2.right * moveSpeed;
         }
     }
