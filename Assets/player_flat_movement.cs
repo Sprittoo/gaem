@@ -7,6 +7,8 @@ public class player_flat_movement : MonoBehaviour
     private float moveSpeed = 5;
     private Rigidbody2D rb;
     private Vector2 movement;
+
+
     // Start is called before the first frame update
     void Start()
     {
