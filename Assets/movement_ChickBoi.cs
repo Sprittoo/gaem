@@ -4,39 +4,50 @@ using UnityEngine;
 
 public class movement_ChickBoi : MonoBehaviour
 {
-    private Rigidbody2D rb;
     private float moveSpeed = 5;
-
-    private Vector2 movemnt;
+    private Rigidbody2D rb;
+    private Vector2 movement;
+    private bool facingRight;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.name = "ChickBoi";
+        gameObject.name = "player";
+        rb = GetComponent<Rigidbody2D>();
+        facingRight = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //movemnt.x = Input.GetAxisRaw("Horizontal");
-        //movemnt.y = Input.GetAxisRaw("Vertical");
-        rb = GetComponent<Rigidbody2D>();
-        if (Input.GetKeyDown(KeyCode.W) == true)
+        //returns  -1 or 1
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+
+        if (movement.x == 1 && !facingRight)
         {
-            rb.velocity = Vector2.up * moveSpeed;
+            FlipSprite();
         }
-        if (Input.GetKeyDown(KeyCode.A) == true)
+
+        if (movement.x == -1 && facingRight)
         {
-            rb.velocity = Vector2.left * moveSpeed;
+            FlipSprite();
         }
-        if (Input.GetKeyDown(KeyCode.S) == true)
-        {
-            rb.velocity = Vector2.down * moveSpeed;
-        }
-        if (Input.GetKeyDown(KeyCode.D) == true)
-        {
-            rb.velocity = Vector2.right * moveSpeed;
-        }
+
+    }
+
+    void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + (movement * moveSpeed * Time.fixedDeltaTime));
+    }
+
+    void FlipSprite()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
     }
 }

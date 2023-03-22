@@ -23,7 +23,16 @@ public class player_flat_movement : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
     }
 
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
         rb.MovePosition(rb.position + (movement * moveSpeed * Time.fixedDeltaTime));
     }
 }
+
+
+
+///Code below (also in ChickBoi_Movement) are for "outerspace" kinda physics movement
+// if (Input.GetKeyDown(KeyCode.A) == true)
+//         {
+//             rb.velocity = Vector2.left * moveSpeed;
+//         }

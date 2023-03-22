@@ -44,8 +44,8 @@ TagManager:
   - name: Grass
     uniqueID: 2700935559
     locked: 0
-  - name: Stairs
-    uniqueID: 911117141
+  - name: Path
+    uniqueID: 657643841
     locked: 0
   - name: Stage
     uniqueID: 3767028605
@@ -56,6 +56,9 @@ TagManager:
   - name: Wall
     uniqueID: 3181155175
     locked: 0
+  - name: Stairs
+    uniqueID: 911117141
+    locked: 0
   - name: Player shadow
     uniqueID: 3070346873
     locked: 0
@@ -64,4 +67,16 @@ TagManager:
     locked: 0
   - name: Gates
     uniqueID: 2245984907
+    locked: 0
+  - name: bush back
+    uniqueID: 2418824211
+    locked: 0
+  - name: guild_fence
+    uniqueID: 2411992847
+    locked: 0
+  - name: guild house
+    uniqueID: 2288044289
+    locked: 0
+  - name: New Layer 13
+    uniqueID: 1030034025
     locked: 0
