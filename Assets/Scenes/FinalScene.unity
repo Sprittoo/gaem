@@ -311,7 +311,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5976862196277540172, guid: f390ef93a1eec4f218940cebb0dd6eea, type: 3}
       propertyPath: m_text
-      value: Click on the icon to go to my portfolio
+      value: Click here to go to my portfolio
+      objectReference: {fileID: 0}
+    - target: {fileID: 5976862196277540173, guid: f390ef93a1eec4f218940cebb0dd6eea, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 5976862196277540173, guid: f390ef93a1eec4f218940cebb0dd6eea, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5976862196881608516, guid: f390ef93a1eec4f218940cebb0dd6eea, type: 3}
       propertyPath: m_Sprite
@@ -725,6 +733,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5976862197421280820, guid: f390ef93a1eec4f218940cebb0dd6eea, type: 3}
   m_PrefabInstance: {fileID: 196277498}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &714543770 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5976862197498539667, guid: f390ef93a1eec4f218940cebb0dd6eea, type: 3}
+  m_PrefabInstance: {fileID: 196277498}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714543767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &714543772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -737,6 +756,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49fc847e3f36b0a468f0e03a05251552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &714543773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714543767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 714543770}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2084508884}
+        m_TargetAssemblyTypeName: OpenLink_LinkedIn, Assembly-CSharp
+        m_MethodName: OpenURL
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: https://llingtan00.wixsite.com/liling
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &769385329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21008,7 +21083,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.34, y: 1.8}
+  m_AnchoredPosition: {x: 5.14, y: 1.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1136027153
@@ -21031,7 +21106,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Click here to go to my LInkedIn
+  m_text: Click here to leave me a message :)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -21235,7 +21310,7 @@ Transform:
   m_GameObject: {fileID: 1193737183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.72, y: 25.24, z: 0}
-  m_LocalScale: {x: 12.156056, y: 8.966637, z: 1}
+  m_LocalScale: {x: 14.131416, y: 8.966637, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -21497,7 +21572,7 @@ Transform:
   m_GameObject: {fileID: 1300093980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.0544, y: -0.6384, z: -0.09282838}
-  m_LocalScale: {x: 10.290979, y: 7.7642665, z: 1}
+  m_LocalScale: {x: 18.652401, y: 11.35524, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 428205216}
@@ -22130,8 +22205,8 @@ GameObject:
   - component: {fileID: 1332666214}
   - component: {fileID: 1332666213}
   - component: {fileID: 1332666212}
-  - component: {fileID: 1332666211}
   - component: {fileID: 1332666215}
+  - component: {fileID: 1332666216}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -22162,18 +22237,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0}
---- !u!114 &1332666211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1332666209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09b3438dd71ed774dba9a746ac7f6510, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1332666212
 Animator:
   serializedVersion: 5
@@ -22286,9 +22349,21 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: https://llingtan00.wixsite.com/liling
+          m_StringArgument: https://llingtan00.wixsite.com/liling/contact
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1332666216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332666209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09b3438dd71ed774dba9a746ac7f6510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1367268178
 GameObject:
   m_ObjectHideFlags: 0
@@ -22575,7 +22650,7 @@ Transform:
   m_GameObject: {fileID: 1439217170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.3255, y: 0.2894, z: 0.5172069}
-  m_LocalScale: {x: 5.195756, y: 4.400175, z: 1}
+  m_LocalScale: {x: 8.637944, y: 6.2702494, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 778731254}
@@ -23837,6 +23912,17 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &2084508884 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5976862196830970856, guid: f390ef93a1eec4f218940cebb0dd6eea, type: 3}
+  m_PrefabInstance: {fileID: 196277498}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa243962191dd84f9352045a95f218a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2114919697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4926181472161917412, guid: 810d33efd324948debba949e9a8c74e6, type: 3}

@@ -10,9 +10,10 @@ public class input_sys_movement : MonoBehaviour
     private Rigidbody2D rb;
     private bool facingRight;
     private float moveSpeed;
-    private Animator animator;
+    private Animator animator; //this is animator for the character not dialog box
     private CapsuleCollider2D myCapsuleCollider;
     public popUpBoxScriptLinkedIn popUpBoxScriptLinkedIn;
+    public popUpBoxScriptContact popUpBoxScriptContact;
     public bool isDialogOpen = false;
 
     // Start is called before the first frame update
@@ -24,7 +25,8 @@ public class input_sys_movement : MonoBehaviour
         facingRight = true;
         moveSpeed = 5;
         popUpBoxScriptLinkedIn.popUpAnimator.SetBool("isNormal", true);
-
+        popUpBoxScriptContact.popUpAnimator.SetBool("isNormal", true);
+        popUpBoxScriptResume.popUpAnimator.SetBool("isNormal", true);
     }
 
     // Update is called once per frame
@@ -60,14 +62,47 @@ public class input_sys_movement : MonoBehaviour
         {
             Debug.Log("I am now interacting with interactables");
 
-            if (!isDialogOpen) {
+            if (!isDialogOpen)
+            {
                 popUpBoxScriptLinkedIn.openPopUp();
-             
+
             }
-            if (isDialogOpen) {
+            if (isDialogOpen)
+            {
                 popUpBoxScriptLinkedIn.closePopUp();
             }
-           
+
+        }
+        if (myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Contact")))
+        {
+            Debug.Log("I am now interacting with Contact");
+
+            if (!isDialogOpen)
+            {
+                popUpBoxScriptContact.openPopUpContact();
+            }
+            if (isDialogOpen)
+            {
+                popUpBoxScriptContact.closePopUpContact();
+            }
+
+
+        }
+        if (myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Resume")))
+        {
+            Debug.Log("I am now interacting with Resume");
+
+            if (!isDialogOpen)
+            {
+                popUpBoxScriptResume.openPopUpResume();
+            }
+            if (isDialogOpen)
+            {
+                popUpBoxScriptResume.closePopUpResume();
+            }
+
+
+
         }
 
     }
