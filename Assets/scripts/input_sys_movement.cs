@@ -12,7 +12,7 @@ public class input_sys_movement : MonoBehaviour
     private float moveSpeed;
     private Animator animator;
     private CapsuleCollider2D myCapsuleCollider;
-    public popUpBoxScript popUpBoxScript;
+    public popUpBoxScriptLinkedIn popUpBoxScriptLinkedIn;
     public bool isDialogOpen = false;
 
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class input_sys_movement : MonoBehaviour
         myCapsuleCollider = GetComponent<CapsuleCollider2D>();
         facingRight = true;
         moveSpeed = 5;
-        popUpBoxScript.popUpAnimator.SetBool("isNormal", true);
+        popUpBoxScriptLinkedIn.popUpAnimator.SetBool("isNormal", true);
 
     }
 
@@ -61,11 +61,11 @@ public class input_sys_movement : MonoBehaviour
             Debug.Log("I am now interacting with interactables");
 
             if (!isDialogOpen) {
-                popUpBoxScript.openPopUp();
+                popUpBoxScriptLinkedIn.openPopUp();
              
             }
             if (isDialogOpen) {
-                popUpBoxScript.closePopUp();
+                popUpBoxScriptLinkedIn.closePopUp();
             }
            
         }
