@@ -3,24 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class text : MonoBehaviour
+public class popUps : MonoBehaviour
 {
-    private TMP_Text thetext;
+    GameObject popUpBox;
+    Animator animator;
+    TMP_Text textlah;
     // Start is called before the first frame update
     void Start()
     {
-        thetext = GetComponent<TMP_Text>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        thetext.text = "Ling's House";
 
     }
 
+    void PopUp(string texty)
+    {
+        popUpBox.SetActive(true);
+        textlah.text = texty;
+        animator.SetTrigger("pop");
 
-
-
+    }
 }

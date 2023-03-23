@@ -8,7 +8,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Interactables
   - Water
   - UI
   - 
@@ -79,4 +79,16 @@ TagManager:
     locked: 0
   - name: New Layer 13
     uniqueID: 1030034025
+    locked: 0
+  - name: linkedin signboard
+    uniqueID: 3564523245
+    locked: 0
+  - name: house signboard
+    uniqueID: 1689969205
+    locked: 0
+  - name: guild board
+    uniqueID: 2613018207
+    locked: 0
+  - name: npc
+    uniqueID: 4189317819
     locked: 0
