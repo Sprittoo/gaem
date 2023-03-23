@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class input_sys_movement : MonoBehaviour
 {
     private Vector2 moveInput;
@@ -11,6 +12,8 @@ public class input_sys_movement : MonoBehaviour
     private float moveSpeed;
     private Animator animator;
     private CapsuleCollider2D myCapsuleCollider;
+    public popUpBoxScript popUpBoxScript;
+    public bool isDialogOpen = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +23,7 @@ public class input_sys_movement : MonoBehaviour
         myCapsuleCollider = GetComponent<CapsuleCollider2D>();
         facingRight = true;
         moveSpeed = 5;
+        popUpBoxScript.popUpAnimator.SetBool("isNormal", true);
 
     }
 
@@ -55,6 +59,15 @@ public class input_sys_movement : MonoBehaviour
         if (myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Interactables")))
         {
             Debug.Log("I am now interacting with interactables");
+
+            if (!isDialogOpen) {
+                popUpBoxScript.openPopUp();
+             
+            }
+            if (isDialogOpen) {
+                popUpBoxScript.closePopUp();
+            }
+           
         }
 
     }

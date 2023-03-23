@@ -5,9 +5,9 @@ using TMPro;
 
 public class popUps : MonoBehaviour
 {
-    GameObject popUpBox;
-    Animator animator;
-    TMP_Text textlah;
+    public GameObject popUpBox;
+    public Animator animator;
+    public TMP_Text textlah;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +25,5 @@ public class popUps : MonoBehaviour
         popUpBox.SetActive(true);
         textlah.text = texty;
         animator.SetTrigger("pop");
-
     }
 }
